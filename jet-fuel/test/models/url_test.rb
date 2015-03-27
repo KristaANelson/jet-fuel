@@ -10,4 +10,10 @@ class UrlTest < ActiveSupport::TestCase
     url = Url.new(short_url: "www.google.com")
     refute url.valid?
   end
+
+  test "creates a short_url before create" do
+    url = Url.new(full_url: "www.google.com")
+    url.save
+    assert url.short_url
+  end
 end
