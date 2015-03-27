@@ -12,7 +12,7 @@ class UrlsController < ApplicationController
     @url = Url.find(params[:id])
   end
 
-private
+  private
 
   def url_params
     params.require(:url).permit(:full_url)
