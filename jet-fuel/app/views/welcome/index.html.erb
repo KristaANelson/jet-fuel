@@ -1,2 +1,11 @@
-<h1> Welcome to Jet Fuel </h1>
-<h3> The fastest way to short URLs </h3>
+<div class="row text-center">
+  <h1> Welcome to Jet Fuel </h1>
+  <h3> The fastest way to short URLs </h3>
+</div>
+
+<div class="row text_center col-md-push-3 col-md-6 url-input" >
+  <%= bootstrap_form_for(@url) do |f| %>
+  <%= f.text_field :full_url %>
+  <%= f.submit "Make it shorter!" %>
+  <% end %>
+</div>
