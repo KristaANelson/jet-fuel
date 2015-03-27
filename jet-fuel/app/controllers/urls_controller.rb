@@ -9,7 +9,6 @@ class UrlsController < ApplicationController
   end
 
   def show
-    require 'pry'; binding.pry
     @url = Url.find(params[:id])
   end
 
