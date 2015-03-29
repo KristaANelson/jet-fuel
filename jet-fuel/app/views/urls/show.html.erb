@@ -1,5 +1,8 @@
 <div class="text-center">
   <h1> Your URL has been shortened!</h1>
-    <h3> Full url: <%= @url.full_url %></h3>
-    <h3> Short url: <%= @url.short_url %></h3>
+    <h3> Original Url: <%= @url.full_url %></h3>
+    <h3> Shortened url:
+      <%= link_to short_url_redirect_path(short_url: @url.short_url),
+                  short_url_redirect_path(short_url: @url.short_url) %>
+    </h3>
 </div>

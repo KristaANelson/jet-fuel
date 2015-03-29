@@ -12,7 +12,7 @@ class UrlRedirectTest < ActionDispatch::IntegrationTest
   end
 
   test "As a guest, when I give a url I get back a service shortened URL" do
-    long_url = "www.thisisareallylongurl.com/1234567"
+    long_url = "https://mail.google.com/mail/"
     visit "/"
     fill_in "url_full_url", with: long_url
     click_link_or_button("Make it shorter!")
