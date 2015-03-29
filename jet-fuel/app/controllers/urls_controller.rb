@@ -2,7 +2,6 @@ class UrlsController < ApplicationController
   def create
     url = Url.new(url_params)
     if url.save
-      flash[:success] = "URL was successfully shortened!"
       redirect_to url_path(url)
     else
       flash[:errors] = "Invalid URL"
