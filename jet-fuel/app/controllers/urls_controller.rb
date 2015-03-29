@@ -15,6 +15,7 @@ class UrlsController < ApplicationController
 
   def redirect
     @url = Url.find_by(short_url: params[:short_url])
+    @url.up_visit_count
     redirect_to @url.full_url
   end
 
