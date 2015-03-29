@@ -7,4 +7,9 @@ class Url < ActiveRecord::Base
   def shorten_url
     self.short_url = Time.new.strftime("%H%M%S")
   end
+
+  def up_visit_count
+    self.visit_count += 1
+    save
+  end
 end
